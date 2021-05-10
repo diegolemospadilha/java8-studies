@@ -1,0 +1,10 @@
+
+o	java:S106"9Replace this use of System.out or System.err by a logger.(µ×‡‘ıÿÿÿÿ8÷Ï£”/H`RMAJORZ
+CODE_SMELL
+o
+java:S4143"DVerify this is the key that was intended; it was already set before.(ñ½§8íî‚£”/H]RMAJORZBUG
+k
+java:S2864"4Iterate over the "entrySet" instead of the "keySet".(ç—Áœıÿÿÿÿ8±¡ı¢”/H[RMAJORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(–İ‚Ş8±¡ı¢”/H\RMAJORZ
+CODE_SMELL

@@ -1,0 +1,44 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Program {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Enter file full path:");
+		
+		final String PATH = "/home/lemospadilha/Documentos/Udemy Courses/Java8/files-java8-course/candidates-map.txt";
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(PATH))) {
+			
+			Map<String, Integer> candidates = new HashMap<>();
+			String line = br.readLine();
+			
+			while(line != null) {
+				String[] fields = line.split(",");
+				String username = fields[0];
+				Integer totalVotes = Integer.parseInt(fields[1]);
+				
+				boolean hasCandidate = candidates.containsKey(username);
+				
+				if(hasCandidate)
+					int votes = candidates.get(username);
+				else 
+					candidates.put(username, totalVotes);
+					
+				line = br.readLine();
+			}
+			
+			System.out.println("Total users: " + users.size());
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+		
+		sc.close();
+	}
+}

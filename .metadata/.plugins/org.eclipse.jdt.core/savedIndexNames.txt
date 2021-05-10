@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+/home/lemospadilha/Documentos/Udemy Courses/Java8/javabasico-workspace/.metadata/.plugins/org.eclipse.jdt.core
+1037111962.index
+3719221183.index
+1758375768.index
+2349341005.index
+799889141.index
+2319942237.index
+1732223566.index
+4073854533.index

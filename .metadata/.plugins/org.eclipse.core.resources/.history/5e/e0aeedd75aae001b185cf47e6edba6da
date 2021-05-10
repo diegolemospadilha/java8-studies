@@ -1,0 +1,52 @@
+package application;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Set<Integer> a = new HashSet<Integer>();
+		Set<Integer> b = new HashSet<Integer>();
+		Set<Integer> c = new HashSet<Integer>();
+		System.out.println("How many students for course A?");
+		Scanner sc = new Scanner(System.in);
+
+		int quantityA = sc.nextInt();
+
+		for (int i = 0; i < quantityA; i++) {
+			int studentCode = sc.nextInt();
+			a.add(studentCode);
+		}
+
+		// B
+		System.out.println("How many students for course b?");
+
+		int quantityB = sc.nextInt();
+
+		for (int i = 0; i < quantityB; i++) {
+			int studentCode = sc.nextInt();
+			b.add(studentCode);
+		}
+		
+		a.addAll(b);
+
+		// C
+		System.out.println("How many students for course C?");
+
+		int quantityC = sc.nextInt();
+
+		for (int i = 0; i < quantityC; i++) {
+			int studentCode = sc.nextInt();
+			c.add(studentCode);
+		}
+		
+		a.addAll(c);
+		sc.close();
+		System.out.println("Total students:" + a.size());
+
+	}
+
+}
