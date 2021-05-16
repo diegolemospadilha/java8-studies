@@ -40,9 +40,25 @@ public class Product {
 	public boolean nonStaticProductPredicate() {
 		return this.getPrice() >= 100;
 	}
+	
+	/*
+	 * Static method to be referenced in the function
+	 */
+	public static void staticPriceUpdate(Product product) {
+		double factor = 1.1;
+		product.setPrice(product.getPrice() * factor);
+	}
+	
+	/*
+	 * No Static method to be referenced in the function
+	 */
+	public void nonStaticPriceUpdate() {
+		price = price * 1.1;
+	}
 
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", price=" + price + "]";
+		String formatPrice = String.format("%.2f", price);
+		return "Product [name= " + name + ", price= " + formatPrice + "]";
 	}
 }
